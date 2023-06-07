@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listings</title>
+  <link rel="stylesheet" href="/../css/listing.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <main>
+    {{> navbar}}
+    <div class="section">
+      {{#each listings as |listing|}}
+    <section class="listings">
+      <article class="listing-item">
+        <div class="image-container">
+            <img src={{listing.pictureURL}}>
+        </div>
+        <div class="listing-details">
+            <h2>{{listing.title}}</h2>
+            <p>{{listing.description}}</p>
+            {{!-- <a href="#" class="btn">View Details</a> --}}
+            <button id="toggleButton">View Details</button>
+            <div id="details" style="display: none;">
+            <p><strong>{{listing.ownerName}} : {{listing.ownerPhone}}</strong></p>
+            </div>
+        </div>
+    </article>
+    </section>
+    {{/each}}
+    </div>
+
+
+
+      {{!-- <article class="listing-item">
+        <div class="image-container">
+          <img src="" alt="Listing Image">
+        </div>
+        <div class="listing-details">
+          <h2>Listing Title 2</h2>
+          <p>Listing Description 2</p>
+          <a href="#" class="btn">View Details</a>
+        </div>
+      </article> --}}
+
+
+      
+    </section>
+  </main>
+      <!-- Footer -->
+</div>
+<footer class="site-footer">
+  <p>&copy; 2023 PgForBoys. All rights reserved.</p>
+</footer>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

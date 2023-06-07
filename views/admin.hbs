@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{>navbar}}
+    <form action="/pgForBoys/addListing" method="POST">
+    <input type="text" name="title" placeholder="enter title"><br>
+    <input type="text" name="description" placeholder="enter description"><br>
+    <input type="text" name="ownerName" placeholder="enter owner Name"><br>
+    <input type="number" name="ownerPhone" placeholder="enter owners phone number"><br>
+    <input type="text" name="pictureURL" placeholder="enter property picture"><br>
+    <button type="submit">Add details</button>
+    </form>
+
+    <div>
+        {{#each listings as |listing|}}
+            <div>{{listing.title}}</div>
+            <div>{{listing.description}}</div>
+            <div>{{listing.ownerName}}</div>
+            <div>{{listing.ownerPhone}}</div>
+            <div><img src="{{listing.pictureURL}}"></img></div>
+
+            <button class="deleteBtn">
+                Delete listing
+            </button>
+        {{/each}}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
