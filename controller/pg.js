@@ -38,3 +38,14 @@ module.exports.addListing =  (req,res,next)=>{
             res.send(err);
         })
 }
+module.exports.deleteListing = (req,res,next)=>{
+    const {id}=req.body;
+    console.log(id);
+    listings.deleteOne({_id:id})
+        .then(()=>{
+            res.render('listings')
+        })
+        .catch(err=>{
+            console.log("could not delete")
+        })
+}

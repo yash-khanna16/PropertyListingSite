@@ -1,14 +1,18 @@
 $(() => {
   const deleteBtn = $(".deleteBtn");
   deleteBtn.on("click", (ev) => {
-    // let id = ev.target;
-    console.log(ev.target);
-    // $.post(
-    //     '/pgForBoys/admin',{
-    //         id
-    //     }).done((data)=>{
-
-    //     })
+    console.log(ev);
+    let id = ev.target.id;
+    console.log(ev.target.id);
+    // let attribute = ev.target.getAttribute('class');
+    // console.log(attribute);
+    $.post(
+        '/pgForBoys/admin/deleteListing',{
+          id
+        }).done((data)=>{
+          // updateListings
+          console.log(data);
+        })
   });
 });
 
@@ -33,12 +37,12 @@ $(() => {
 //   });
 // });
 
-document.getElementById("toggleButton").addEventListener("onclick", function () {
-  var details = document.getElementById("details");
-  console.log(hiii);
-  if (details.style.display === "none") {
-    details.style.display = "block";
-  } else {
-    details.style.display = "none";
-  }
-});
+// document.getElementById("toggleButton").addEventListener("onclick", function () {
+//   var details = document.getElementById("details");
+//   console.log(hiii);
+//   if (details.style.display === "none") {
+//     details.style.display = "block";
+//   } else {
+//     details.style.display = "none";
+//   }
+// });
