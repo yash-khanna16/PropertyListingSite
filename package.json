@@ -1,7 +1,7 @@
 {
   "name": "pgforboys",
   "version": "1.0.0",
-  "description": "",
+  "description": "Website for listing properties",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "connect-mongodb-session": "^3.1.1",
     "express": "^4.18.2",
@@ -21,5 +22,13 @@
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
     "uuid": "^9.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thepranavsehgal/PropertyListingSite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thepranavsehgal/PropertyListingSite/issues"
+  },
+  "homepage": "https://github.com/thepranavsehgal/PropertyListingSite#readme"
 }

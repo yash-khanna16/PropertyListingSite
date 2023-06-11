@@ -46,3 +46,14 @@ $(() => {
 //     details.style.display = "none";
 //   }
 // });
+
+$(() => {
+  const toggleButton = $(".toggleButton");
+  const details = $(".details");
+  toggleButton.on("click", (ev) => {
+    console.log(ev);
+    let id = ev.target.id;
+    console.log(ev.target.id);
+    $("div").show("slow");
+  });
+});
